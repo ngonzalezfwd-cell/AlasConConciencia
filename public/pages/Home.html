@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlasConCiencia | Inicio</title>
+    <link rel="stylesheet" href="../styles/Home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.css' rel='stylesheet' />
+    <script src='https://unpkg.com/maplibre-gl@2.1.9/dist/maplibre-gl.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div id="logotipo">
+                <img src="../imgs/91 sin título_20260212132955.png" alt="Logo">
+                Alas<span>ConCiencia</span>
+            </div>
+
+            <ul id="menu-navegacion">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#especies">Especies</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+
+                <li id="nav-auth-container" class="nav-auth-buttons">
+
+                    <a href="/login" id="nav-login" class="nav-btn btn-login">Iniciar Sesión</a>
+    
+                    <div id="nav-user-info" style="display:none;">
+                        <span id="user-greeting">Hola!</span>
+                        <a href="#" id="btn-logout" class="nav-btn btn-logout">Cerrar Sesión</a>
+                    </div>
+
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="intro">
+
+            <div id="contenedor-intro">
+
+                <h1 id="titulo">Bienvenido a AlasConCiencia</h1>
+
+                <p id="descripcion">Ven a conocer todas las especies de aves tropicales que puedes encontrar en nuestro mundo.</p>
+
+                <div id="botones-accion">
+
+                    <a href="#especies" class="boton boton-primario">Explorar Especies</a>
+                    <a href="/mapa" class="boton boton-secundario">Ver Mapa Interactivo</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="especies" class="seccion-informativa">
+            <h2 class="titulo-seccion">Especies Destacadas</h2>
+            <div id="cuadrícula-especies" class="contenedor-tarjetas">
+                <article class="tarjeta-especie" id="tarjeta-quetzal">
+                    <div class="tarjeta-imagen placeholder-tropical"></div>
+                    <div class="tarjeta-info">
+                        <h3>Quetzal Resplandeciente</h3>
+                        <p>El símbolo sagrado de las selvas mesoamericanas, conocido por su plumaje verde esmeralda.</p>
+                    </div>
+                </article>
+                <article class="tarjeta-especie" id="tarjeta-tucan">
+                    <div class="tarjeta-imagen placeholder-tropical"></div>
+                    <div class="tarjeta-info">
+                        <h3>Tucán Toco</h3>
+                        <p>Famoso por su enorme y colorido pico, es una de las aves más icónicas del Amazonas.</p>
+                    </div>
+                </article>
+                <article class="tarjeta-especie" id="tarjeta-guacamaya">
+                    <div class="tarjeta-imagen placeholder-tropical"></div>
+                    <div class="tarjeta-info">
+                        <h3>Guacamaya Roja</h3>
+                        <p>Un estallido de color en el cielo selvático, símbolo de vitalidad y libertad.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="mapa">
+            <h2 class="titulo-seccion">Avistamientos en Tiempo Real</h2>
+            <iframe src="/mapa" frameborder="0" id="mapa-iframe"></iframe>
+        </section>
+
+        <section id="conservacion" class="seccion-fondo-vibrante">
+
+            <div class="contenedor-limitado">
+
+                <h2 class="titulo-seccion">Nuestra Misión: Conservar</h2>
+
+                <div id="bloque-conservacion">
+
+                    <p>La pérdida de hábitat es la mayor amenaza para nuestras aves tropicales. En AlasConCiencia,
+                        trabajamos para proteger sus hogares y asegurar que sigan surcando nuestros cielos.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contacto" class="seccion-formulario">
+
+            <h2 class="titulo-seccion">Únete a la Causa</h2>
+            <form id="formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tu@email.com">
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="¿Cómo quieres ayudar?"></textarea>
+                </div>
+                <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="pie-pagina">
+        <p>&copy; 2026 AlasConCiencia - Protegiendo el Vuelo Tropical</p>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
