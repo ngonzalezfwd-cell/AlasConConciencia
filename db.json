@@ -1,3 +1,78 @@
 {
-    "users":[]
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Naomy",
+      "gmail": "gnaomy276@gmail.com",
+      "contraseña": "12345678",
+      "rol": "admin",
+      "foto": "../imgs/91 sin título_20260212132955.png"
+    },
+
+    {
+      "id": "431e",
+      "nombre": "Naomy",
+      "apellido": "Gonzalez",
+      "edad": "12",
+      "genero": "Femenino",
+      "pais": "costarrica",
+      "email": "ngonzalezfwd@gmail.com",
+      "telefono": "48384734",
+      "password": "12345678",
+      "rol": "user",
+      "foto": "../imgs/91 sin título_20260212132955.png"
+    },
+    {
+      "id": "efeb",
+      "nombre": "Naomy",
+      "apellido": "Gonzalez",
+      "edad": "12",
+      "genero": "Femenino",
+      "pais": "costarrica",
+      "email": "ngonzalezfwd@gmail.com",
+      "telefono": "48384734",
+      "password": "123456",
+      "rol": "user",
+      "foto": "../imgs/91 sin título_20260212132955.png"
+    },
+    {
+      "id": "5053",
+      "nombre": "Naomy",
+      "apellido": "Gonzalez",
+      "edad": "12",
+      "genero": "Femenino",
+      "pais": "costarrica",
+      "email": "ngonzalezfwd@gmail.com",
+      "telefono": "-48384734",
+      "password": "12345678",
+      "rol": "user",
+      "foto": "../imgs/91 sin título_20260212132955.png"
+    },
+    {
+      "id": "36ef",
+      "nombre": "Naomy",
+      "apellido": "Gonzalez",
+      "edad": "12",
+      "genero": "Femenino",
+      "pais": "costarrica",
+      "email": "ngonzalezfwdgmail.com",
+      "telefono": "48384734",
+      "password": "12345678",
+      "rol": "user",
+      "foto": "../imgs/91 sin título_20260212132955.png"
+    },
+    {
+      "id": "fdc3",
+      "nombre": "43",
+      "apellido": "Gonzalez",
+      "edad": "12",
+      "genero": "Femenino",
+      "pais": "costarrica",
+      "email": "ngonzalez@fwdgmail.com",
+      "telefono": "48384734",
+      "password": "12345678",
+      "rol": "user",
+      "foto": "../imgs/91 sin título_20260212132955.png"
+    }
+  ]
 }

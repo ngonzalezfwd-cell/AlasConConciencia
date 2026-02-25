@@ -1,22 +1,48 @@
-document.getElementById('form-login').addEventListener('submit', function (e) {
+import { getUsuarios } from "../services/serviciosUser.js";
+
+const btnLogin = document.getElementById('btnLogin');
+
+btnLogin.addEventListener('click', async function (e) {
     e.preventDefault();
 
     const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const mensajeError = document.getElementById('mensaje-error');
+    const contraseña = document.getElementById('password').value;
 
-    // Obtener usuarios
-    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    // Validar credenciales
-    const usuario = usuarios.find(u => u.email === email && u.password === password);
+    const usuarios = await getUsuarios();
+    const login = usuarios.find(u => u.gmail === email && u.contraseña === contraseña);
 
-    if (usuario) {
-        // Guardar sesión activa (simple)
-        localStorage.setItem('usuarioLogueado', JSON.stringify(usuario));
-        window.location.href = "/";
-    } else {
-        mensajeError.textContent = "Correo o contraseña incorrectos.";
-        mensajeError.style.display = "block";
+
+    if (!login) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Correo o contraseña incorrecta, por favor intenta de nuevo',
+        });
+        return;
     }
+
+    if (email.trim() === "" || contraseña.trim() === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor, completa todos los campos',
+        });
+        return;
+    }
+
+    if (login) {
+
+        Swal.fire({
+            icon: 'success',
+            title: '¡Bienvenido ' + login.nombre + '!',
+            text: 'Has iniciado sesión correctamente',
+
+        }).then(() => {
+            window.location.href = '/';
+        });
+
+        console.log(login);
+    }
+
 });
